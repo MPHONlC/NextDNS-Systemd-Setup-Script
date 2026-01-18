@@ -100,7 +100,7 @@ curl -L -o setup-dns.sh https://raw.githubusercontent.com/MPHONlC/NextDNS-System
 
 ### Git Clone 
 git clone https://github.com/MPHONlC/NextDNS-Systemd-Setup-Script.git
-cd nextdns-systemd-setup
+cd NextDNS-Systemd-Setup-Script
 sudo ./setup-dns.sh
 
 # Make executable and run
