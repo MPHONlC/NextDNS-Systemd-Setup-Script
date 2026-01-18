@@ -44,6 +44,58 @@ The script adds these commands to your `.bashrc`:
 - **Error Handling**: Comprehensive error checking and user-friendly error messages
 - **Root Detection**: Ensures script runs with appropriate privileges
 
+## Configuration Flow
+
+1. **Backup Check**: Script checks for existing backups and offers restoration options
+2. **NextDNS Setup**: Enter your NextDNS Profile ID and optional custom endpoint name
+3. **Fallback DNS**: Optionally add fallback DNS servers with auto-detection
+4. **System Configuration**: Configures systemd-resolved, resolv.conf, and NetworkManager
+5. **Utilities Installation**: Adds DNS management commands to your shell
+6. **Verification**: Runs final checks to ensure everything is working
+
+## Supported DNS Services
+
+The script includes a database of DNS services with their:
+- IPv4 and IPv6 addresses
+- TLS hostnames for DNS-over-TLS
+- DNS-over-HTTP/3 endpoints
+- Official websites and features
+
+**Included Services**: NextDNS, Cloudflare, Google, Quad9, AdGuard, OpenDNS, CleanBrowsing
+
+## Backup System
+
+### Automatic Backups
+- Created before any configuration changes
+- Stored in `~/.setup-dns-backups/` (user-accessible)
+- Named based on configuration (e.g., `QUAD9-20240101-120000.backup`)
+
+### Backup Contents
+- `/etc/systemd/resolved.conf`
+- `/etc/resolv.conf`
+- `/etc/NetworkManager/NetworkManager.conf`
+- `~/.bashrc`
+
+## Safety Features
+
+- **No destructive actions without confirmation**
+- **Comprehensive backups before changes**
+- **Dry-run mode for testing**
+- **Error checking at every step**
+- **Automatic service restarts with verification**
+
+
+## Requirements
+- Linux with systemd and systemd-resolved
+- Root/sudo privileges
+- NetworkManager (optional, for NetworkManager integration)
+
+## Usage Examples
+
+### Basic Setup
+```bash
+sudo ./setup-dns.sh
+
 ## Quick Start
 
 ### Direct Download & Install
@@ -62,3 +114,26 @@ sudo ./setup-dns.sh
 
 ### Dry Run (Test Mode)
 sudo ./setup-dns.sh --dry-run
+```
+
+## Support
+
+If this project has been useful to you, consider supporting its development:
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/aph0nlc)
+
+## Attribution
+
+This script is released for free public use. If you modify or distribute this script:
+
+**Please include attribution to the original author.**
+
+Example attribution in modified scripts:
+```bash
+# Based on NextDNS Systemd-Resolved Setup Script by [APHONlC]
+# Original: https://github.com/MPHONlC/NextDNS-Systemd-Setup-Script
+```
+
+---
+
+*Note: This script is designed for technical users. Always review scripts before running them with sudo privileges.*
