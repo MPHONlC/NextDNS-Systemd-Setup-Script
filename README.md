@@ -90,7 +90,6 @@ The script includes a database of DNS services with their:
 - Root/sudo privileges
 - NetworkManager (optional, for NetworkManager integration)
 
-## Usage Examples
 
 ## Quick Start
 
