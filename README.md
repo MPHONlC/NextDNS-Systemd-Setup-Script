@@ -51,6 +51,14 @@ The script adds these commands to your `.bashrc`:
 # Download the script
 curl -L -o setup-dns.sh https://raw.githubusercontent.com/MPHONlC/NextDNS-Systemd-Setup-Script/main/setup-dns.sh
 
+### Git Clone 
+git clone https://github.com/MPHONlC/NextDNS-Systemd-Setup-Script.git
+cd nextdns-systemd-setup
+sudo ./setup-dns.sh
+
 # Make executable and run
 chmod +x setup-dns.sh
 sudo ./setup-dns.sh
+
+### Dry Run (Test Mode)
+sudo ./setup-dns.sh --dry-run
