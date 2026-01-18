@@ -92,10 +92,6 @@ The script includes a database of DNS services with their:
 
 ## Usage Examples
 
-### Basic Setup
-```bash
-sudo ./setup-dns.sh
-
 ## Quick Start
 
 ### Direct Download & Install
