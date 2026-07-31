@@ -159,3 +159,5 @@ Example attribution in modified scripts:
 ---
 
 *Note: This script is designed for technical users. Always review scripts before running them with sudo privileges.*
+*Note: For CachyOS and similar distro with built-in GUI to configure DNS this script is not needed.*
+*EX: For CachyOS go to "CachyOS Hello > Apps/Tweaks > Change DNS Server" *
