@@ -108,6 +108,35 @@ sudo ./setup-dns.sh
 sudo ./setup-dns.sh --dry-run
 ```
 
+## Manual Restore Instructions (incase the script fail to do so)
+
+```bash
+# Find where your local backups are
+/home/"user"/.setup-dns-backups
+
+# Its either named
+NextDNS-YOURNEXTDNSID-202x0xxx-xxxxx0.backup
+
+example: NextDNS-e11289-202600220-204420.backup
+
+# Extract the contents of the .backup file, it should contain
+- bashrc
+- NetworkManager.conf
+- resolv.conf
+- resolved.conf
+
+### Open your terminal and type (Alacrity, etc..)
+
+sudo cp /home/"user"/.setup-dns-backups/NextDNS-YOURNEXTDNSID-202x0xxx-xxxxx0/resolved.conf /etc/systemd/resolved.conf
+sudo cp /home/"user"/.setup-dns-backups/NextDNS-YOURNEXTDNSID-202x0xxx-xxxxx0/resolv.conf /etc/resolv.conf
+sudo cp /home/"user"/.setup-dns-backups/NextDNS-YOURNEXTDNSID-202x0xxx-xxxxx0/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
+
+change: NextDNS-YOURNEXTDNSID-202x0xxx-xxxxx0.backup
+to the actual file name of your backup
+and change "user" to your home user folder name
+
+### you can also choose to restore your .bashrc via terminal or copy pasting it to your home directory
+
 ## Support
 
 If this project has been useful to you, consider supporting its development:
