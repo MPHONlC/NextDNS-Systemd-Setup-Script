@@ -136,6 +136,7 @@ to the actual file name of your backup
 and change "user" to your home user folder name
 
 ### you can also choose to restore your .bashrc via terminal or copy pasting it to your home directory
+```
 
 ## Support
 
